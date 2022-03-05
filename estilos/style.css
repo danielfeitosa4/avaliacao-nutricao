@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap');
+
+
+body {
+  font-family: 'Merriweather Sans', sans-serif;
+  background-color: aliceblue;
+}
+
+main {
+  background-color: white;
+  width: 470px;
+  padding: 20px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 1em rgb(0 0 0 / 53%)
+}
+
+#qr {
+  width: 40%;
+  margin: auto;
+  display: block;
+  padding-bottom: 20px;
+}
+
+h1 {
+  font-weight: 700;
+}
+.estrelas input {
+  display: none;
+}
+.estrelas label i.fa{
+  font-size: 2.5em
+}
+.estrelas label i.fa:before {
+  content:'\f005';
+  color: #FC0;
+}
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+  color: #CCC;
+}
+
+#comentario {
+  margin-top: 20px;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./estilos/style.css">
+  <title>Avaliação Almoço</title>
+</head>
+<body>
+
+  <main>
+    <!--QR Code-->
+    <img id="qr" src="./images/QR3.png" alt="Qr Code">
+
+    <!--Título-->
+    <h1>O que você achou do almoço?</h1>
+    <br>
+    <p>Escolha de 1 a 5 estrelas para classificar.</p>
+    
+    <!--Estrelas de avaliação-->
+    <div class="estrelas">
+      <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+      <label for="cm_star-1"><i class="fa"></i></label>
+      <input type="radio" id="cm_star-1" name="fb" value="1"/>
+      <label for="cm_star-2"><i class="fa"></i></label>
+      <input type="radio" id="cm_star-2" name="fb" value="2"/>
+      <label for="cm_star-3"><i class="fa"></i></label>
+      <input type="radio" id="cm_star-3" name="fb" value="3"/>
+      <label for="cm_star-4"><i class="fa"></i></label>
+      <input type="radio" id="cm_star-4" name="fb" value="4"/>
+      <label for="cm_star-5"><i class="fa"></i></label>
+      <input type="radio" id="cm_star-5" name="fb" value="5"/>
+    </div>
+    <br>
+
+    <!--Itens para deixarem a avaliação mais completa-->
+    <p>Do que você gostou?</p>
+    
+    <!--Parte 1-->
+    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+      <input type="checkbox" checked class="btn-check" id="btncheck1" autocomplete="off">
+      <label class="btn btn-outline-primary m-1" for="btncheck1">Sabor</label>
+      
+      <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+      <label class="btn btn-outline-primary m-1" for="btncheck2">Tempero</label>
+    
+      <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+      <label class="btn btn-outline-primary m-1" for="btncheck3">Boa temperatuda</label>
+    </div>
+
+    <!--Parte 2-->
+    <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+      <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
+      <label class="btn btn-outline-primary m-1" for="btncheck4">Aparência</label>
+
+      <input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off">
+      <label class="btn btn-outline-primary m-1" for="btncheck5">Quantidade </label>
+      
+      <input type="checkbox" class="btn-check" id="btncheck6" autocomplete="off">
+      <label class="btn btn-outline-primary m-1" for="btncheck6">Ingredientes</label>
+    </div>
+
+    <!--Comentártio sobre almoço-->
+    <div class="mt-4 shadow p-3" data-anime="up">
+      <form class="formulario" action="./receber-dados.php" method="post" name="avaliação almoço" target="_blank" novalidate>        
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-text-fill" viewBox="0 0 16 16">
+            <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
+          </svg>
+          <label for="mensagem" class="form-label">Mensagem: </label>
+          <textarea type="text" class="form-control" id="mensagem" placeholder="Deixe o seu comentário..." name="mensagem" rows="10" maxlength="300"></textarea>
+        </div>
+  
+        <div class="d-flex justify-content-center mt-4">
+          <button type="submit" name="acao" value="enviar" class="btn btn-primary mb-3">Enviar avaliação</button>
+        </div>
+      </form>
+    </div>
+
+  </main>
+</body>
+</html>
